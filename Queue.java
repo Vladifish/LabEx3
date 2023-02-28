@@ -48,4 +48,11 @@ public class Queue<Type> {
         return el;
     }
 
+    public Type peek() {
+        if (isEmpty())
+            return null;
+        else
+            return (Type) que[front];
+    }
+
 }
