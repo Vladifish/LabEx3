@@ -12,4 +12,17 @@ public class Queue<T> {
             maxQueueSize = n;
         que = new Object[maxQueueSize];
     }
+
+    public void clear() {
+        front = -1;
+        rear = -1;
+    }
+
+    public boolean isEmpty() {
+        return (front == -1);
+    }
+
+    public boolean isFull() {
+        return ((rear + 1) % maxQueueSize == 0);
+    }
 }
