@@ -31,6 +31,14 @@ public class LabEx3 {
             queue.enqueue(Character.toString(childName));
         }
 
+        System.out.print("The children's names are: ");
+
+        while (!queue.isEmpty()) {
+            System.out.print(queue.dequeue() + " ");
+        }
+        System.out.println();
+
+
 
 
 
