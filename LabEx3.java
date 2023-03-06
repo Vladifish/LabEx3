@@ -26,6 +26,11 @@ public class LabEx3 {
 
         Queue<String> queue = new Queue<>();
 
+        for (int i = 0; i < n; i++) {
+            char childName = (char) ('A' + i);
+            queue.enqueue(Character.toString(childName));
+        }
+
 
 
 

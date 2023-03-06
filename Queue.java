@@ -27,14 +27,13 @@ public class Queue<Type> {
         return ((rear + 1) % maxQueueSize == 0);
     }
 
-    public int enqueue(int el) {
+    public void enqueue(Type el) {
         if (isFull())
-            return -999;
+            return;
         rear = (rear + 1) % maxQueueSize;
         que[rear] = el;
         if (front == -1)
             front = 0;
-        return 1;
     }
 
     public Type dequeue() {
