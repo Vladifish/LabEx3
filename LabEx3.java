@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-/*  Tabuzo, Abdiel Clarence && Velazco Vladimir Gray
+/*  Tabuzo, Abdiel Clarence && Velazco, Vladimir Gray
     LabEx3.java
     Purpose: TBD
     ISC2605 - 1CSC
@@ -23,6 +23,14 @@ public class LabEx3 {
 
         System.out.print("Enter the number of children (up to 26) (n): ");
         int n = input.nextInt();
+
+        Queue<String> queue = new Queue<>();
+
+
+
+
+
+
 
 
 
