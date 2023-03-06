@@ -24,11 +24,12 @@ public class LabEx3 {
         System.out.print("Enter the number of children (up to 26) (n): ");
         int n = input.nextInt();
 
-        Queue<String> queue = new Queue<>();
+        Queue<Character> queue = new Queue<>();
 
         for (int i = 0; i < n; i++) {
             char childName = (char) ('A' + i);
-            queue.enqueue(Character.toString(childName));
+            String name = childName + "";
+            queue.enqueue(name);
         }
 
         System.out.print("The children's names are: ");
@@ -36,6 +37,7 @@ public class LabEx3 {
         while (!queue.isEmpty()) {
             System.out.print(queue.dequeue() + " ");
         }
+
         System.out.println();
 
 

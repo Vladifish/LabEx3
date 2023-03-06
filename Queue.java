@@ -1,5 +1,5 @@
 // I have a feeling we'll make our own modulo operation
-public class Queue<Type> {
+public class Queue <Type> {
     private int maxQueueSize = 100;
     private int front = -1, rear = -1;
     private Object[] que;
@@ -27,13 +27,17 @@ public class Queue<Type> {
         return ((rear + 1) % maxQueueSize == 0);
     }
 
-    public void enqueue(Type el) {
-        if (isFull())
+
+
+    public <T> void enqueue(T el) {
+        if (isFull()) {
             return;
-        rear = (rear + 1) % maxQueueSize;
-        que[rear] = el;
-        if (front == -1)
-            front = 0;
+        }
+        if (isEmpty()) {
+            this.front = 0;
+        }
+        this.rear = (this.rear + 1) % maxQueueSize;
+        this.que[rear] = el;
     }
 
     public Type dequeue() {
