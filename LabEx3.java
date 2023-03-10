@@ -24,13 +24,5 @@ public class LabEx3 {
         System.out.print("Enter the number of children (up to 26) (n): ");
         int n = input.nextInt();
 
-
-
-
-
-
-
-
-
     }
 }
