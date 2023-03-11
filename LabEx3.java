@@ -43,6 +43,7 @@ public class LabEx3 {
 
         // the game itself
         Stack<Character> finishers = new Stack<>(n);
+        int round = 1;
         while (!children.isEmpty()) {
             char el;
             for (int i = 0; i < s - 1; i++) { // iterates through syllables
@@ -51,10 +52,19 @@ public class LabEx3 {
             }
             el = children.dequeue();
             finishers.push(el);
+            System.out.print("After Round " + round + ": ");
+            for (int i = 0; i < n - round; i++) {
+                el = children.dequeue();
+                System.out.print(el + " ");
+                children.enqueue(el);
+            }
+            if (children.isEmpty())
+                System.out.print("Empty");
+            round++;
             System.out.println();
         }
         System.out.println("Winning Order");
         while (!finishers.isEmpty())
-            System.out.print(finishers.pop());
+            System.out.print(finishers.pop() + " ");
     }
 }
