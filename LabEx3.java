@@ -32,15 +32,22 @@ public class LabEx3 {
         int n = input.nextInt();
 
         // queues the children
-        Queue<Character> queue = new Queue<>(n);
+        Queue<Character> children = new Queue<>(n);
         System.out.print("The children's names are: ");
         for (int i = 0; i < n; i++) {
             char name = (char) ('A' + i);
             System.out.print(name);
-            queue.enqueue(name);
+            children.enqueue(name);
         }
         System.out.println();
 
         // the game itself
+        Stack<Character> winners = new Queue<>(n);
+        while (!children.isEmpty()) {
+            Queue<Character> tempQueue = new Queue<>(n);
+            for (int i = 0; i < s - 1; i++) { // iterates through syllables
+
+            }
+        }
     }
 }
