@@ -17,7 +17,7 @@ public class LabEx3 {
         System.out.println("Velazco, Vladimir Gray");
         System.out.println(" ");
 
-        System.out.println("Enter a non-negative integer:");
+        System.out.println("Enter a non-negative integer (t):");
         int t = input.nextInt();
 
         if (t == 1)
@@ -42,12 +42,23 @@ public class LabEx3 {
         System.out.println();
 
         // the game itself
-        Stack<Character> winners = new Queue<>(n);
+        Stack<Character> finishers = new Stack<>(n);
         while (!children.isEmpty()) {
             Queue<Character> tempQueue = new Queue<>(n);
+            char el;
             for (int i = 0; i < s - 1; i++) { // iterates through syllables
-
+                el = children.dequeue();
+                tempQueue.enqueue(el);
+                System.out.print(el);
             }
+            el = children.dequeue();
+            finishers.push(el);
+            while (!tempQueue.isEmpty())
+                children.enqueue(tempQueue.dequeue());
+            System.out.println();
         }
+        System.out.println("Winning Order");
+        while (!finishers.isEmpty())
+            System.out.print(finishers.pop());
     }
 }
