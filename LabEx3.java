@@ -8,8 +8,10 @@ import java.util.Scanner;
     Notes:
  */
 public class LabEx3 {
+    static Scanner input = new Scanner(System.in);
+
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+
         System.out.println(" ");
         System.out.println("Tabuzo, Abdiel Clarence");
         System.out.println("Velazco, Vladimir Gray");
@@ -18,24 +20,27 @@ public class LabEx3 {
         System.out.println("Enter a non-negative integer:");
         int t = input.nextInt();
 
+        if (t == 1)
+            pen_pen_de_Sarapen();
+    }
+
+    static void pen_pen_de_Sarapen() {
         System.out.print("Enter the number of syllables in the song (s): ");
         int s = input.nextInt();
 
         System.out.print("Enter the number of children (up to 26) (n): ");
         int n = input.nextInt();
 
+        // queues the children
         Queue<Character> queue = new Queue<>(n);
-
-        for (int i = 0; i < n; i++) {
-            queue.enqueue((char) ('A' + i));
-        }
-
         System.out.print("The children's names are: ");
-        while (!queue.isEmpty()) {
-            System.out.print(queue.dequeue() + " ");
+        for (int i = 0; i < n; i++) {
+            char name = (char) ('A' + i);
+            System.out.print(name);
+            queue.enqueue(name);
         }
-
         System.out.println();
 
+        // the game itself
     }
 }
