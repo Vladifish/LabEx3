@@ -1,4 +1,10 @@
-// I have a feeling we'll make our own modulo operation
+/*  Tabuzo, Abdiel Clarence && Velazco, Vladimir Gray
+    LabEx3.java
+    Purpose: TBD
+    ISC2605 - 1CSC
+
+    Notes: Finished
+ */
 public class Queue<Type> {
     private int maxQueueSize = 100;
     private int front = -1, rear = -1;

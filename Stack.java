@@ -1,7 +1,9 @@
-/* Vladimir Gray P. Velazco | Jam Meisy T. Tan
- * ICS 2605
- * 1 - CSC
- * Lab Exercise 2 : Generic Stack Class
+/*  Tabuzo, Abdiel Clarence && Velazco, Vladimir Gray
+    LabEx3.java
+    Purpose: TBD
+    ISC2605 - 1CSC
+
+    Notes:
  */
 public class Stack<T> {
     private int maxStkSize = 100;

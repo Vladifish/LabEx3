@@ -5,7 +5,7 @@ import java.util.Scanner;
     Purpose: TBD
     ISC2605 - 1CSC
 
-    Notes:
+    Notes: Finished
  */
 public class LabEx3 {
     static Scanner input = new Scanner(System.in);
