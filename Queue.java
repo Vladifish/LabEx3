@@ -24,7 +24,7 @@ public class Queue<Type> {
     }
 
     public boolean isFull() {
-        return ((rear + 1) % maxQueueSize == 0);
+        return ((rear + 1) % maxQueueSize == front);
     }
 
     public int enqueue(Type el) {
