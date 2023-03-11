@@ -27,7 +27,7 @@ public class Queue<Type> {
         return ((rear + 1) % maxQueueSize == 0);
     }
 
-    public int enqueue(int el) {
+    public int enqueue(Type el) {
         if (isFull())
             return -999;
         rear = (rear + 1) % maxQueueSize;
