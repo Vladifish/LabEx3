@@ -44,17 +44,13 @@ public class LabEx3 {
         // the game itself
         Stack<Character> finishers = new Stack<>(n);
         while (!children.isEmpty()) {
-            Queue<Character> tempQueue = new Queue<>(n);
             char el;
             for (int i = 0; i < s - 1; i++) { // iterates through syllables
                 el = children.dequeue();
-                tempQueue.enqueue(el);
-                System.out.print(el);
+                children.enqueue(el);
             }
             el = children.dequeue();
             finishers.push(el);
-            while (!tempQueue.isEmpty())
-                children.enqueue(tempQueue.dequeue());
             System.out.println();
         }
         System.out.println("Winning Order");
